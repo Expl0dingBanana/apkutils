@@ -8,17 +8,16 @@ def read(fname):
 
 
 setup(
-    name="apkutils",
+    name="apkutils-mad",
 
-    version='0.8.1',
+    version='0.0.1',
 
     description=("Utils for parsing apk."),
     long_description=read('README.rst'),
 
-    url="https://github.com/mikusjelly/apkutils",
+    url="https://github.com/Expl0dingBanana/apkutils",
 
-    author="mikusjelly",
-    author_email="mikusjelly@gmail.com",
+    author="expl0dingbanana",
 
     license="MIT",
     classifiers=[
@@ -37,7 +36,6 @@ setup(
         "cigam",
         "pyelftools",
         "pyopenssl",
-        "TextWizard",
         "xmltodict",
         "beautifulsoup4",
     ],

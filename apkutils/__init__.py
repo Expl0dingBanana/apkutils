@@ -12,7 +12,7 @@ from apkutils.axml.axmlparser import AXML
 from apkutils.dex.dexparser import DexFile
 from bs4 import BeautifulSoup
 from cigam import Magic
-from TextWizard import hash
+import hashlib
 
 __version__ = '0.8.1'
 
@@ -208,7 +208,7 @@ class APK:
         self.trees = {}
         for pre, _, node in RenderTree(root):
             if node.height > height:
-                key = hash.hash(serialize_node(node), 'md5')
+                key = hashlib.md5(serialize_node(node))
                 if key in self.trees:
                     self.trees[key].append(node)
                 else:
